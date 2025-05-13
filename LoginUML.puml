@@ -1,0 +1,10 @@
+@startuml
+actor User
+User -> LoginScreen : Open App
+LoginScreen --> User : Display username and password fields
+User -> LoginScreen : Enter username and password
+User -> LoginScreen : Click "Login" button
+LoginScreen -> AuthenticationService : Validate credentials
+AuthenticationService --> LoginScreen : Return success or failure
+LoginScreen --> User : Display success or error message
+@enduml
